@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="src/styler.css" />
+    <meta http-equiv="x-ua-Compatible" content="ie=edge" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
-      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="src/styler.css" />
     <title>Weather App</title>
    </head>
   <body>
- <div class="container">
-   <div class="Current-Weather">
+    <div class="container">
+    <div class="current-weather-wrapper">
+ <div class="Current-Weather">
+   <div class="overview">  
      <h4>Current Weather</h4>
    <h1 id="city">Los Angeles</h1>
    <ul>
@@ -27,8 +27,15 @@
    </ul>
    <div class="row">
     <div class="col-6">
+      <div class="d-flex weather-temperature">
       <img src="" alt="Cloudy"
       />
+      <div>
+    <strong id="temperature"></strong
+    ><span class="units"> °C</span>
+  </div>
+</div>
+</div>
       14°C | °F
       </div>
       <div class="col-6">
@@ -45,13 +52,13 @@
         </ul>
       </div>
       
-    <div class="wrapper">
+    
       <form id="search-form" class="mb-5">
         
       <input type="search" placeholder="Type a city.." class="form-control" />
       <div class="col-3">
       <input type="submitted" value="search" class="btn btn-primary w-100/> 
-      <div class="overview">   
+       
       
 
           <small>
@@ -60,7 +67,7 @@
          </small>
       </div>
     </div>
-
+   </div>
   </body>
   <script src="src/extra.js"></script>
 </html>
