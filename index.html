@@ -4,29 +4,64 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="src/styler.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
     <title>Weather App</title>
-  </head>
-
+   </head>
   <body>
-    <h1>Current Weather</h1>
-    <h3><h3>
-      <p id="location"></p>
-    <h3 id="temperature"></h3>
-    <h3 id="description"></h3>
-    
-    <span class="unit">
-        <input type="text" placeholder="Enter any city..." id="cityinput">
-        <input type="submit" value="Submit" id="add">
-    <br>
-    <br>
-    <br>
-         <h4 id="cityoutput"></h4> 
-         <p id="description"></p> 
-           <p id="temp"></p> 
-           <p id="wind"></p> 
+ <div class="container">
+   <div class="Current-Weather">
+     <h4>Current Weather</h4>
+   <h1 id="city">Los Angeles</h1>
+   <ul>
+     <li>
+       Friday 06:00
+     </li>
+     <li>
+        Cloudy
+     </li>
+   </ul>
+   <div class="row">
+    <div class="col-6">
+      <img src="" alt="Cloudy"
+      />
+      14°C | °F
+      </div>
+      <div class="col-6">
+        <ul>
+          <li>
+            Precipitation: 100%
+          </li>
+          <li>
+            Humidity: 82%
+          </li>
+          <li>
+            Wind: 10 mp/h
+          </li>
+        </ul>
+      </div>
+      
+    <div class="wrapper">
+      <form id="search-form" class="mb-5">
         
-                </span>
-                <a href="https://github.com/emchavarria1/weather">Open source code Edna Chavarria</a>
+      <input type="search" placeholder="Type a city.." class="form-control" />
+      <div class="col-3">
+      <input type="submitted" value="search" class="btn btn-primary w-100/> 
+      <div class="overview">   
+      
+
+          <small>
+        <a href="https://github.com/emchavarria1/weather" target="_blank">Open source code by</a>   
+         Edna Chavarria
+         </small>
+      </div>
+    </div>
+
   </body>
   <script src="src/extra.js"></script>
 </html>
+

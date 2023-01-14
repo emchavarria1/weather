@@ -1,17 +1,37 @@
-body {
-  background-color: #73b5f3;
+body,
+html {
+  margin: 0;
+  height: 100%;
+  background: rgb(104, 255, 104);
+}
+.wrapper {
+  width: 70%;
+  height: 90%;
+  margin: 0;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  background: skyblue;
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 7px;
+  display: block;
+  position: center;
+  padding: 20px;
 }
 h1 {
   font-family: cursive;
   color: black;
-  font-size: 55px;
+  font-size: 25px;
   text-align: center;
 }
 h3 {
   text-align: center;
   display: block;
   font-family: cursive;
-  font-size: 35px;
+  font-size: 20px;
   color: blueviolet;
   font-weight: bolder;
   margin-top: 0px;
@@ -24,13 +44,12 @@ p {
   text-align: center;
 }
 #cityinput {
-  margin-left: 30px 25px 25px 25px;
+  margin: 30px 25px 25px 25px;
   padding: 5px 20px 2px 20px;
-  text-align: center;
+
   font-weight: bolder;
   font: black;
   font-family: cursive;
-  float: left;
 }
 #add {
   border-color: rgb(0, 0, 0);
@@ -65,14 +84,14 @@ h4 {
   text-align: center;
   display: block;
   font-family: cursive;
-  font-size: 30px;
+  font-size: 20px;
   color: rgb(0, 0, 0);
   font-weight: bolder;
   margin-top: 0px;
 }
 
 strong {
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   color: blueviolet;
   font-family: cursive;
@@ -90,3 +109,4 @@ strong {
   font: black;
   font-family: cursive;
 }
+
