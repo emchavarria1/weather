@@ -31,15 +31,15 @@ let windElement = document.querySelector("#wind");
 let dateElement = document.querySelector("#date");
 let iconElement = document.querySelector("#icon");
 
-CelsiusTemperature = response.data.main.temp;
+celsiusTemperature = response.data.main.temp;
 
-   temperatureElement.innerHTML = Math.round(CelsiusTemperature);
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
    cityElement.innerHTML = response.data.name;
    descriptionElement.innerHTML = response.data.weather[0].description;
    humidityElement.innerHTML = response.data.main.humidity;
    windElement.innerHTML = Math.round(response.data.wind.speed);
    dateElement.innerHTML = formatDate(response.data.dt * 1000);
-   iconElement.setAttribute (
+   iconElement.setAttribute 
  "src", 
  `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=bo47df7eab4a9c009f0343t0f7c9207d&units=metric'
 ); 
@@ -48,7 +48,7 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 
 function search(city) {
   let apiKey = "c125eb344194a5a8a1f0e673edb26318"; 
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `;https://api.shecodes.io/weather/v1/current?q=${city}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(displayTemperature);
 }
  
@@ -81,7 +81,7 @@ celsiusLink.classList.remove("active");
 fahrenheitLink.classList.add("active");
 let fahrenheitTemperature = (celsiusTemperature * 9) / 5 * 32;
 temperatureElement.innerHTML = math.round(fahrenheitTemperature);
-}
+
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
