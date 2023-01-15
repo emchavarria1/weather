@@ -64,13 +64,11 @@ p {
 }
 
 h4 {
-
+  background-color: brown;
   text-align: center;
   font-weight: bolder;
   font: red;
-  
-
-  background-color: violet;
+  background-color: red;
   float: left;
 }
 
@@ -80,7 +78,7 @@ a {
   font-family: cursive;
   font-size: 20px;
   color: blue;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 strong {
@@ -93,7 +91,7 @@ strong {
 .button {
   border-color: rgb(0, 0, 0);
   border-width: 5px;
-  width: 130px;
+  width: 30px;
   height: 35px;
   border-radius: 20px;
   margin: 20px 20px 10px 360px;
@@ -101,5 +99,5 @@ strong {
   font-weight: bolder;
   font: black;
   font-family: cursive;
-}
+  
 
