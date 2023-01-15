@@ -3,6 +3,7 @@ html {
   margin: 0;
   height: 100%;
   background: rgb(104, 255, 104);
+  font-family: cursive;
 }
 .wrapper {
   width: 70%;
@@ -11,7 +12,7 @@ html {
 }
 .container {
   width: 90%;
-  height: 100%;
+  height: 75%;
   background: skyblue;
   border-color: black;
   border-radius: 10px;
@@ -43,61 +44,53 @@ p {
   font-family: cursive;
   text-align: center;
 }
-#cityinput {
+#city {
   margin: 30px 25px 25px 25px;
   padding: 5px 20px 2px 20px;
 
   font-weight: bolder;
-  font: black;
-  font-family: cursive;
+  font: red;
+ 
 }
-#add {
-  border-color: rgb(0, 0, 0);
-  border-width: 5px;
-  width: 120px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
+.col-9 {
+  width: 200px;
+  height: 3px;
+  text-align: left;
   display: block;
-  font-weight: bolder;
+  margin-left: 150px;
   font: black;
-  font-family: cursive;
-  margin-top: 15px;
+  
+  margin-top: 2px;
 }
 
-input {
-  border-color: rgb(0, 0, 0);
-  border-width: 5px;
-  width: 100px;
-  height: 20px;
-  border-radius: 20px;
+h4 {
+
   text-align: center;
   font-weight: bolder;
-  font: solid black;
-  font-family: cursive;
+  font: red;
+  
 
   background-color: violet;
   float: left;
 }
 
-h4 {
+a {
   text-align: center;
   display: block;
   font-family: cursive;
   font-size: 20px;
-  color: rgb(0, 0, 0);
-  font-weight: bolder;
-  margin-top: 0px;
+  color: blue;
+  margin-top: 90px;
 }
 
 strong {
   font-size: 25px;
-  text-align: center;
+  text-align: left;
   color: blueviolet;
   font-family: cursive;
   margin-bottom: 0 auto;
 }
-#current-location-button {
+.button {
   border-color: rgb(0, 0, 0);
   border-width: 5px;
   width: 130px;
