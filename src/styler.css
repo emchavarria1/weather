@@ -11,54 +11,41 @@ html {
   margin: 0;
 }
 .container {
-  width: 90%;
-  height: 75%;
+  max-width: 60%;
+  max-height: 75%;
   background: skyblue;
   border-color: black;
-  border-radius: 10px;
+  border-radius: 25px;
   border-style: solid;
   border-width: 7px;
-  display: block;
+   
   position: center;
   padding: 20px;
+  margin-top: 50px;
 }
-h1 {
-  
-  color: black;
-  font-size: 25px;
-  text-align: left;
-}
-h3 {
+#city {
+  font-size: 55px;
   text-align: center;
-  display: flex;
- 
-  font-size: 20px;
-  color: blueviolet;
   font-weight: bolder;
-  margin-top: 100px;
-}
-#text {
-  display: flex;
-  margin-right: 50px;
+  
+  background-color: violet;
+   display: block;
+ 
+ 
+city {in-left: 200px;
+  color: dark2lateblue;
+  
 }
  
 
-.col-9 {
-  width: 200px;
-  height: 10px;
-  display: flex;
-  margin-right: 50px;
-  color: blueviolet; 
-   margin-bottom: 100px;
-    font-size: 15px;
-}
-.col-3{
+
+.col-{
     width: 100px;
   height: 100px;
  margin-bottom: 0 auto; 
  display: flex;
 }
-.col-6 {
+.col- {
   font-size: 15px;
   color: blueviolet;
   
@@ -68,8 +55,8 @@ h3 {
 .row {
   font-size: 15px;
   color: blueviolet;
- margin: 0 auto;
- text-align: center;
+ margin-left: 475px;
+ margin-bottom: 275px;
  
 }
 h4 {
@@ -79,33 +66,36 @@ h4 {
   background-color: violet;
    display: block;
    font-size: 25px;
+   
 }
 
-a {
-  text-align: center;
-  display: flex;
+small {
+  text-align: right;
+  float: right;
   font-family: cursive;
   font-size: 15px;
   color: blue;
-  margin-right: 350px;
+ display: flex;
 }
 
 strong {
   font-size: 25px;
-  text-align: right;
+  text-align: center;
   color: blueviolet;
-  
+  display: flex;
   margin-bottom: 0px;
 }
 .form-control {
   width: 150px;
   height: 25px;
 margin-bottom: 0px;
-   display: block;
+   display: flex;
 }
 .btn {
+  position: 25px;
    width: 150px;
    height: 25px;
 margin-top: 3px;
    display: block;
+   float: right;
 }

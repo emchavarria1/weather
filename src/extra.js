@@ -39,7 +39,7 @@ celsiusTemperature = response.data.main.temp;
    humidityElement.innerHTML = response.data.main.humidity;
    windElement.innerHTML = Math.round(response.data.wind.speed);
    dateElement.innerHTML = formatDate(response.data.dt * 1000);
-   iconElement.setAttribute 
+   iconElement.setAttribute(
  "src", 
  `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=bo47df7eab4a9c009f0343t0f7c9207d&units=metric'
 ); 
@@ -48,10 +48,10 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 
 function search(city) {
   let apiKey = "c125eb344194a5a8a1f0e673edb26318"; 
-  let apiUrl = `;https://api.shecodes.io/weather/v1/current?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = 'https://api.shecodes.io/weather/v1/current?q=${city}&appid=${apiKey}&units=metric`)
+  
  axios.get(apiUrl).then(displayTemperature);
-}
- 
+
 function handleSubmit(event) {
 event.preventDefault();
 let cityInputElement = document.querySelector("#city-input");
@@ -61,8 +61,19 @@ search(cityInputElement.value);
 function displayFahrenheitTemperature(event) {
 event.preventDefault();
 let temperatureElement = document.querySelector("#temperature")
+
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 let fahrenheitTemperature = (celsiusTemperature * 9) / 5 * 32;
 temperatureElement.innerHTML = math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+event.preventDefault();
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+let temperatureElement = document.querySelector("#temperature")
+temperatureElement.innerHTML = math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
@@ -73,25 +84,24 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-Link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 search("New York");
 
 
 
-celsiusLink.classList.remove("active");
-fahrenheitLink.classList.add("active");
-let fahrenheitTemperature = (celsiusTemperature * 9) / 5 * 32;
-temperatureElement.innerHTML = math.round(fahrenheitTemperature);
 
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let celsiusTemperature = (fahrenheitTemperature * 9) / 5 * 32;
-  temperatureElement.innerHTML = math.round(celsiusTemperature);
+
+
+
+ 
+
   }
   
   
+
 
 
 

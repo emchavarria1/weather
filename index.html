@@ -4,32 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-Compatible" content="ie=edge" />
-    <link
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="src/styler.css" />
-    <title>Weather App</title>
+     <link rel="stylesheet" href="src/styler.css" />
+    <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous"
+    />
+        <title>Weather App</title>
    </head>
   <body>
     <div class="container">
-    <div class="current-weather-wrapper">
- <div class="Current-Weather">
-   <div class="overview">  
-     <h4>Current Weather</h4>
-      <input type="search" placeholder="Type a city.." class="form-control" />
-      <div class="col-3">
-     <input type="submitted" value="search" class="btn btn-primary w-100/> 
-   <h1 id="city">Los Angeles</h1>
-   <form id="search-form" class="mb-5">
-       <strong id="temperature"></strong>
-    <span class="units"></span>
-      <strong>14</strong>
-      °C | °F         
-      <div class="d-flex weather-temperature">
-      <img src="" alt="Cloudy"
-      />   
+      <div class="Current-Weather-app">
+     <h1 id="city">
+       Los Angeles
+       </h1>
+     <ul>
+     <li>
+       Friday 06:00
+     </li>
+     <li>
+        Cloudy
+     </li>
+   </ul>
+  <div class="row">
+   <div class="col-6">
+   <img 
+   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
+   alt="Clear"
+      />  
+      <strong>14</strong> °C | °F                 
       </div>
-      <div class="col-9">
+       <div class="col-6">
         <ul>
           <li>
             Precipitation: 100%
@@ -41,24 +47,54 @@
             Wind: 10 mp/h
           </li>
         </ul>
-        <div class="col-6">    
- <div class="row">
+       </div>   
+       </div>
+      </div>
+         <small>
+        <a 
+        href="https://github.com/emchavarria1/weather" 
+        target="_blank"
+        >Open source code by</a
+        >   
+         Edna Chavarria
+         </small>
+       <script src="src/extra.js"></script>
+         </body>
+       </html>
+       
+       
+       
+       
+       
+       
+       
+        
+    <div class="current-weather-wrapper">
+ 
+   <div class="overview">  
+     <h4>Current Weather in your city</h4>
+      <input type="search" placeholder="Type a city.." class="form-control" />
+      <div class="col-6">
+     <input type="submitted" value="search" class="btn btn-primary w-100/> 
+   mb-5">
+     <h1 id="city">Los Angeles</h1>
+       <strong id="temperature"></strong>
+    <span class="units"></span>
+           
+      <div class="d-flex weather-temperature">
+      
+      
+     
+        
+ 
     
-   <ul>
-     <li>
-       Friday 06:00
-     </li>
-     <li>
-        Cloudy
-     </li>
-   </ul>
+   
   
    
       <div>
   
-  </div>
-</div>
-</div>
+  
+
     
       </div>
       
@@ -67,14 +103,9 @@
        
       
 
-          <small>
-        <a href="https://github.com/emchavarria1/weather" target="_blank">Open source code by</a>   
-         Edna Chavarria
-         </small>
+       
       </div>
     </div>
    </div>
-  </body>
-  <script src="src/extra.js"></script>
-</html>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
