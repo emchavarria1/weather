@@ -41,7 +41,7 @@ celsiusTemperature = response.data.main.temp;
    dateElement.innerHTML = formatDate(response.data.dt * 1000);
    iconElement.setAttribute(
  "src", 
- `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=bo47df7eab4a9c009f0343t0f7c9207d&units=metric'
+ `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png`
 ); 
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -72,7 +72,7 @@ function displayCelsiusTemperature(event) {
 event.preventDefault();
 celsiusLink.classList.add("active");
 fahrenheitLink.classList.remove("active");
-let temperatureElement = document.querySelector("#temperature")
+let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = math.round(celsiusTemperature);
 }
 
@@ -89,15 +89,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
 
-
-
-
-
-
-
- 
-
-  }
   
   
 
