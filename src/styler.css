@@ -1,92 +1,75 @@
 body {
-  background-color: #73b5f3;
-}
-h1 {
   font-family: cursive;
-  color: black;
-  font-size: 55px;
-  text-align: center;
-}
-h3 {
-  text-align: center;
-  display: block;
-  font-family: cursive;
-  font-size: 35px;
-  color: blueviolet;
-  font-weight: bolder;
-  margin-top: 0px;
-}
-h2,
-p {
-  font-weight: bolder;
-  font: black;
-  font-family: cursive;
-  text-align: center;
-}
-#cityinput {
-  margin-left: 30px 25px 25px 25px;
-  padding: 5px 20px 2px 20px;
-  text-align: center;
-  font-weight: bolder;
-  font: black;
-  font-family: cursive;
-  float: left;
-}
-#add {
-  border-color: rgb(0, 0, 0);
-  border-width: 5px;
-  width: 120px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: block;
-  font-weight: bolder;
-  font: black;
-  font-family: cursive;
-  margin-top: 15px;
-}
-
-input {
-  border-color: rgb(0, 0, 0);
-  border-width: 5px;
-  width: 100px;
-  height: 20px;
-  border-radius: 20px;
-  text-align: center;
-  font-weight: bolder;
-  font: solid black;
-  font-family: cursive;
-
   background-color: violet;
-  float: left;
 }
 
-h4 {
-  text-align: center;
-  display: block;
-  font-family: cursive;
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  font-weight: bolder;
-  margin-top: 0px;
+h1 {
+  color: black;
+  font-size: 25px;
+  font-weight: 100px;
+  line-height: 29px;
+  margin-bottom: 0;
 }
 
-strong {
-  font-size: 40px;
-  text-align: center;
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px; 
+ }
+
+.current-weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.Current-Weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 7px solid black;
+  border-radius: 25px;
+  background-color: skyblue;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-right: 7px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
   color: blueviolet;
-  font-family: cursive;
-  margin-bottom: 0 auto;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
 }
-#current-location-button {
-  border-color: rgb(0, 0, 0);
-  border-width: 5px;
-  width: 130px;
-  height: 35px;
-  border-radius: 20px;
-  margin: 20px 20px 10px 360px;
-  display: block;
-  font-weight: bolder;
-  font: black;
-  font-family: cursive;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

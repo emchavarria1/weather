@@ -1,117 +1,117 @@
-function getWeather() {
-  let temperature = document.getElementById("temperature");
-  let description = document.getElementById("description");
-  let location = document.getElementById("location");
-
-  let api = "https://api.openweathermap.org/data/2.5/weather";
-  let apiKey = "c125eb344194a5a8a1f0e673edb26318";
-
-  location.innerHTML = "Locating...";
-
-  navigator.geolocation.getCurrentPosition(success, error);
-
-  function success(position) {
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-
-    let url =
-      api +
-      "?lat=" +
-      latitude +
-      "&lon=" +
-      longitude +
-      "&appid=" +
-      apiKey +
-      "&units=imperial";
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        let temp = data.main.temp;
-        temperature.innerHTML = temp + "° F";
-        location.innerHTML =
-          data.name + " (" + latitude + "°, " + longitude + "°)";
-        description.innerHTML = data.weather[0].main;
-      });
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
 
-  function error() {
-    location.innerHTML = "Unable to retrieve your location";
-  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
-getWeather();
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-let now = new Date();
-let h3 = document.querySelector("h3");
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let year = now.getFullYear();
-let milliseconds = now.getMilliseconds();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec"
-];
-let month = months[now.getMonth()];
-let millisecond = milliseconds[now.getMilliseconds()];
-console.log(now.getMillisecond);
-console.log(now.getDate);
-console.log(now.getDay);
-console.log(now.getFullYear);
-console.log(now.getMonth);
-console.log(now.formatDate);
-h3.innerHTML = `${day} ${month} ${date}, ${hours}: ${minutes}, ${year}`;
-
-let inputval = document.querySelector("#cityinput");
-let btn = document.querySelector("#add");
-let city = document.querySelector("#cityoutput");
-let descrip = document.querySelector("#description");
-let temp = document.querySelector("#temp");
-let wind = document.querySelector("#wind");
-apik = "3045dd712ffe6e702e3245525ac7fa38";
-function convertion(val) {
-  return (val - 273).toFixed(2);
+  return days[day];
 }
 
-btn.addEventListener("click", function () {
-  fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-      inputval.value +
-      "&appid=" +
-      apik
-  )
-    .then((res) => res.json())
+function displayForecast(response) {
+  let forecast = response.data.daily;
 
-    .then((data) => {
-      let nameval = data["name"];
-      let descrip = data["weather"]["0"]["description"];
-      let tempature = data["main"]["temp"];
-      let wndspd = data["wind"]["speed"];
-      city.innerHTML = `Weather of <span>${nameval}<span>`;
-      temp.innerHTML = `Temperature: <span>${convertion(tempature)} C</span>`;
-      description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
-      wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-    })
+  let forecastElement = document.querySelector("#forecast");
 
-    .catch((err) => alert("You entered Wrong city name"));
-});
-function submitted(event) {
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+        </div>
+      </div>
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+}
+
+function search(city) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
   event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 
-f.addEventListener("submit", submitted);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York");
