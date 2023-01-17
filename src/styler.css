@@ -1,101 +1,75 @@
-body,
-html {
-  margin: 0;
-  height: 100%;
-  background: rgb(104, 255, 104);
+body {
   font-family: cursive;
-}
-.wrapper {
-  width: 70%;
-  height: 90%;
-  margin: 0;
-}
-.container {
-  max-width: 60%;
-  max-height: 75%;
-  background: skyblue;
-  border-color: black;
-  border-radius: 25px;
-  border-style: solid;
-  border-width: 7px;
-   
-  position: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-#city {
-  font-size: 55px;
-  text-align: center;
-  font-weight: bolder;
-  
   background-color: violet;
-   display: block;
- 
- 
-city {in-left: 200px;
-  color: dark2lateblue;
-  
-}
- 
-
-
-.col-{
-    width: 100px;
-  height: 100px;
- margin-bottom: 0 auto; 
- display: flex;
-}
-.col- {
-  font-size: 15px;
-  color: blueviolet;
-  
-  
-  display: block;
-}
-.row {
-  font-size: 15px;
-  color: blueviolet;
- margin-left: 475px;
- margin-bottom: 275px;
- 
-}
-h4 {
-  text-align: center;
-  font-weight: bolder;
-  color: bold black;
-  background-color: violet;
-   display: block;
-   font-size: 25px;
-   
 }
 
-small {
-  text-align: right;
-  float: right;
-  font-family: cursive;
-  font-size: 15px;
-  color: blue;
- display: flex;
-}
-
-strong {
+h1 {
+  color: black;
   font-size: 25px;
-  text-align: center;
+  font-weight: 100px;
+  line-height: 29px;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px; 
+ }
+
+.current-weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.Current-Weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 7px solid black;
+  border-radius: 25px;
+  background-color: skyblue;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-right: 7px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
   color: blueviolet;
-  display: flex;
-  margin-bottom: 0px;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
 }
-.form-control {
-  width: 150px;
-  height: 25px;
-margin-bottom: 0px;
-   display: flex;
-}
-.btn {
-  position: 25px;
-   width: 150px;
-   height: 25px;
-margin-top: 3px;
-   display: block;
-   float: right;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -49,8 +49,8 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 function search(city) {
   let apiKey = "c125eb344194a5a8a1f0e673edb26318"; 
   let apiUrl = 'https://api.shecodes.io/weather/v1/current?q=${city}&appid=${apiKey}&units=metric`)
-  
  axios.get(apiUrl).then(displayTemperature);
+}
 
 function handleSubmit(event) {
 event.preventDefault();
@@ -58,10 +58,10 @@ let cityInputElement = document.querySelector("#city-input");
 search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-event.preventDefault();
-let temperatureElement = document.querySelector("#temperature")
-
+function displayFahrenheitTemperature(event) { 
+ event.preventDefault();
+ let temperatureElement = document.querySelector("#temperature");
+ 
 celsiusLink.classList.remove("active");
 fahrenheitLink.classList.add("active");
 let fahrenheitTemperature = (celsiusTemperature * 9) / 5 * 32;
@@ -88,7 +88,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
-
 
 
 
