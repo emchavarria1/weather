@@ -123,7 +123,6 @@ temperatureElement.innerHTML = math.round(fahrenheitTemperature);
 
 function displayCelsiusTemperature(event) {
 event.preventDefault();
-
 let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = math.round(celsiusTemperature);
 }
