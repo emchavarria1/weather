@@ -3,6 +3,10 @@ body {
   background-color: violet;
 }
 
+small a {
+  font-size: 25px;
+  color: skyblue;
+}
 h1 {
   color: black;
   font-size: 25px;
@@ -46,8 +50,8 @@ li {
 
 .weather-temperature img {
   margin-right: 7px;
-  height: 64px;
-  width: 64px;
+  height: 74px;
+  width: 74px;
 }
 
 .weather-temperature strong {
