@@ -48,34 +48,50 @@
           </div>
           <div class="row">
             <div class="col-6">
-             <div class="d-flex weather-temperature">
-                  
-               <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="Clear" id="icon" />
-       <strong id="temperature"></strong
-            ><span class="units"></span>
-        <div>
-                   <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+                  alt="Clear"
+                  id="icon"
+                />
+                <strong id="temperature"></strong><span class="units">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="weekly-forecast" id="forecast">
+          <div class="row">
+            <div class="forecast-date">
+              <div class="col-2">
+                <div class="date">
+                  Thu
+                </div>
+                <img
+                  src="https://openweathermap.org/img/wn/04n@2x.png"
+                  alt=""
+                  width="44"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max"> 18° </span>
+                  <span class="forecast-temperature-min"> 15° </span>
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
           </div>
         </div>
-        <small>
-          <a
-            <a href="https://github.com/emchavarria1/weather" target="_blank"
-            >Open-source code</a
-          >
-          by Edna Chavarria
-        </small>
       </div>
+      <small>
+        <a <a href="https://github.com/emchavarria1/weather" target="_blank"
+          >Open-source code</a
+        >
+        by Edna Chavarria
+      </small>
     </div>
     <script src="src/extra.js"></script>
   </body>
